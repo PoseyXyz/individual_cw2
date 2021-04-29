@@ -11,6 +11,36 @@ router.get('/', async (req, res)=>{
     res.send(await lessons.find({}).toArray())
 
     })
+    router.put("/", async (req, res) => {
+        const lessons = await loadLessonInfoCollection()
+        try {
+          const writeOperations =  req.body.map((item)=>{
+            return {
+              updateOne:{
+                filter:{id:item.id},
+                update:{$set:{
+                  id:item.id,
+                  subject:item.subject,
+                  location:item.location,
+                  price:item.price,
+                  spaces:item.spaces
+                }
+                }
+              }
+            }
+          })
+         await lessons.bulkWrite(writeOperations)
+         
+          
+          res.status(202).send()
+        
+         
+        }catch (e){
+          res.status(500).json({message:"Something went wrong"})
+          console.log(e);
+        }          
+      
+      });    
 
 async function loadLessonInfoCollection(){
     const client = await mongodb.MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology:true});
