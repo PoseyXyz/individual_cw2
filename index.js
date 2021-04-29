@@ -1,9 +1,13 @@
 const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 const path = require("path")
 const fs = require("fs")
 
 const app = express()
 
+app.use(bodyParser.json())
+app.use(cors())
 
 app.use(function(req, res, next){
     console.log(`Request protocol: ${req.protocol}://${req.get('host')}${req.originalUrl}`);

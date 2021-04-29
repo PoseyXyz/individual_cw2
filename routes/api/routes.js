@@ -17,4 +17,24 @@ async function loadLessonInfoCollection(){
     
     return client.db('lessons_database').collection('lessons_information')
 }
+
+router.post('/order', async (req, res)=>{
+    
+    let lessons = await loadOrderInfoCollection()
+  await lessons.insertOne(  {
+      name:req.body.name,
+     phone_number:req.body.phone_number,
+  lessonsInformation:req.body.lessonsInformation
+   
+   })
+  
+  res.status(201).send()
+  })
+
+
+async function loadOrderInfoCollection(){
+  const client = await mongodb.MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology:true});
+  
+  return client.db('lessons_database').collection('order_information')
+}
 module.exports = router
