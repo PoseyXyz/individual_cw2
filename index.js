@@ -11,7 +11,7 @@ app.use(function(req, res, next){
     next();
 })
 
-app.use('/', require('./routes/api/info'))
+app.use('/', require('./routes/api/routes'))
 
 app.use(function(req, res, next){
     var filePath = path.join(__dirname, "static", req.url)
