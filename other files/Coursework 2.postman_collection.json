@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "123a5839-274d-4a9d-a08c-e8f98c998465",
+		"name": "Coursework 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lessons GET request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Lessons PUT request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\":1,\r\n    \"subject\":\"Math\",\r\n  \"location\":\"London\",\r\n  \"price\":200,\r\n  \"spaces\":2\r\n  }, \r\n  {\r\n    \"id\":2,\r\n    \"subject\":\"English\",\r\n  \"location\":\"Lagos\",\r\n  \"price\":300,\r\n  \"spaces\":3\r\n  },\r\n   {\r\n     \"id\":3,\r\n    \"subject\":\"Physics\",\r\n  \"location\":\"Abuja\",\r\n  \"price\":200,\r\n  \"spaces\":4\r\n  },\r\n   {\r\n    \"id\":4,\r\n    \"subject\":\"Chemistry\",\r\n  \"location\":\"Benin\",\r\n  \"price\":190,\r\n  \"spaces\":5  \r\n  },\r\n   {\r\n     \"id\":5,\r\n    \"subject\":\"Biology\",\r\n  \"location\":\"Zaria\",\r\n  \"price\":150,\r\n  \"spaces\":5\r\n  },\r\n   {\r\n     \"id\":6,\r\n    \"subject\":\"Art\",\r\n  \"location\":\"New York\",\r\n  \"price\":120,\r\n  \"spaces\":5\r\n  },\r\n   {\r\n     \"id\":7,\r\n    \"subject\":\"Agriculture\",\r\n  \"location\":\"Osun\",\r\n  \"price\":100,\r\n  \"spaces\":5\r\n  },\r\n   {\r\n     \"id\":8,\r\n    \"subject\":\"Economics\",\r\n  \"location\":\"London\",\r\n  \"price\":100,\r\n  \"spaces\":5\r\n  },\r\n   {\r\n     \"id\":9,\r\n    \"subject\":\"History\",\r\n  \"location\":\"Ogun\",\r\n  \"price\":90,\r\n  \"spaces\":5\r\n  },\r\n   {\r\n     \"id\":10,\r\n    \"subject\":\"Computing\",\r\n  \"location\":\"Malta\",\r\n  \"price\":100,\r\n  \"spaces\":5  \r\n  }\r\n]\r\n\r\n              ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order POST request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Adeposi Adeosun Joshua\",\r\n    \"phone_number\": 182839872,\r\n    \"lessonsInformation\": [{\r\n        \"lessonId\": 7,\r\n        \"name\": \"Agriculture\",\r\n        \"number_of_spaces\": 2\r\n    }, {\r\n        \"lessonId\": 4,\r\n        \"name\": \"Chemistry\",\r\n        \"number_of_spaces\": 1\r\n    }, {\r\n        \"lessonId\": 6,\r\n        \"name\": \"Art\",\r\n        \"number_of_spaces\": 3\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

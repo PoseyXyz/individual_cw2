@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "6089e172734d0c51988015bc"
+  },
+  "name": "Ade",
+  "phone_number": 911,
+  "lessonsInformation": [
+    {
+      "lessonId": 1,
+      "name": "Maths",
+      "number_of_spaces": 3
+    },
+    {
+      "lessonId": 2,
+      "name": "English",
+      "number_of_spaces": 1
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "608a27160ba4fb38d4b6f413"
+  },
+  "name": "Adeposi",
+  "phone_number": 233553242,
+  "lessonsInformation": [
+    {
+      "lessonId": 7,
+      "name": "Agriculture",
+      "number_of_spaces": 2
+    },
+    {
+      "lessonId": 4,
+      "name": "Chemistry",
+      "number_of_spaces": 1
+    },
+    {
+      "lessonId": 6,
+      "name": "Art",
+      "number_of_spaces": 3
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "608a2af80ba4fb38d4b6f414"
+  },
+  "name": "Adeposi Adeosun Joshua",
+  "phone_number": 182839872,
+  "lessonsInformation": [
+    {
+      "lessonId": 7,
+      "name": "Agriculture",
+      "number_of_spaces": 2
+    },
+    {
+      "lessonId": 4,
+      "name": "Chemistry",
+      "number_of_spaces": 1
+    },
+    {
+      "lessonId": 6,
+      "name": "Art",
+      "number_of_spaces": 3
+    }
+  ]
+}]

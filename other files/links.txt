@@ -1,0 +1,3 @@
+Back-end repo link: https://github.com/PoseyXyz/individual_cw2
+Back-end heroku link:https://individual-cw2.herokuapp.com/
+Front-end github-pages link:https://poseyxyz.github.io/individual_cw1/

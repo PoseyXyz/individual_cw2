@@ -1,8 +1,6 @@
 const express = require('express')
-
 const mongodb = require('mongodb')
 const url = 'mongodb+srv://Posey:posey@123@lessoncluster.pckqe.mongodb.net/lessons_database?retryWrites=true&w=majority'
-
 
 const router = express.Router()
 
@@ -30,10 +28,7 @@ router.get('/', async (req, res)=>{
             }
           })
          await lessons.bulkWrite(writeOperations)
-         
-          
-          res.status(202).send()
-        
+          res.status(202).send()        
          
         }catch (e){
           res.status(500).json({message:"Something went wrong"})
@@ -49,7 +44,6 @@ async function loadLessonInfoCollection(){
 }
 
 router.post('/order', async (req, res)=>{
-    
     let lessons = await loadOrderInfoCollection()
   await lessons.insertOne(  {
       name:req.body.name,
